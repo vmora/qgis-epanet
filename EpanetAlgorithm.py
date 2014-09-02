@@ -141,10 +141,12 @@ class EpanetAlgorithm(GeoAlgorithm):
                           [ParameterVector.VECTOR_TYPE_POINT], True))
         self.addParameter(ParameterVector(self.TANKS, 'Tanks layer',
                           [ParameterVector.VECTOR_TYPE_POINT], True))
-        self.addParameter(ParameterVector(self.PUMPS, 'Pumps layer',
-                          [ParameterVector.VECTOR_TYPE_POINT], True))
-        self.addParameter(ParameterVector(self.VALVES, 'Valves layer',
-                          [ParameterVector.VECTOR_TYPE_POINT], True))
+        self.addParameter(ParameterVector(self.PUMPS, 'Pumps layer')) #changed by ruidpina to include both points and line layers
+        self.addParameter(ParameterVector(self.VALVES, 'Valves layer')) #changed by ruidpina to include both points and line layers
+#        self.addParameter(ParameterVector(self.PUMPS, 'Pumps layer',
+#                          [ParameterVector.VECTOR_TYPE_POINT], True))
+#        self.addParameter(ParameterVector(self.VALVES, 'Valves layer',
+#                          [ParameterVector.VECTOR_TYPE_POINT], True))
         self.addParameter(ParameterVector(self.EMITTERS, 'Emiters layer',
                           [ParameterVector.VECTOR_TYPE_POINT], True))
         self.addParameter(ParameterTable(self.DEMANDS  , 'Demands   table', True))
